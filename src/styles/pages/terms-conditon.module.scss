@@ -1,0 +1,111 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.stepText {
+  @extend .fontSmall;
+  @include font-weight-color($fw-medium, $success);
+}
+.title {
+  @extend .font2XlLarge;
+  @include font-weight-color($fw-bold, $black-200);
+  @media (min-width: 768px) {
+    @include font-size-line($font-size-9xl, 40px);
+  }
+}
+.subTitle {
+  @extend .fontMedium;
+  @include font-weight-color($fw-regular, $black-900);
+  @media (min-width: 768px) {
+    @include font-size-line($font-size-lg, 24px);
+  }
+}
+.userDetailsContainer {
+  background-color: #f5f6f7;
+  padding: 32px 16px;
+  padding-bottom: 90px;
+  flex: 1;
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+  .userInfo {
+    display: flex;
+    align-items: center;
+    .profileImg {
+      border: 0.5px solid #d9d9d9;
+      border-radius: 4px;
+      width: 48px;
+      height: 48px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .profileInfo {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      .name {
+        @extend .fontXlLarge;
+        @include font-weight-color($fw-regular, $black-200);
+      }
+      .pan {
+        @extend .fontMedium;
+        @include font-weight-color($fw-regular, $black-600);
+      }
+    }
+  }
+  .fieldsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: space-between;
+    .fieldBox {
+      display: flex;
+      flex-direction: column;
+      flex: 45%;
+      margin-bottom: 10px;
+    }
+    .label {
+      @extend .fontSmall;
+      @include font-weight-color($fw-regular, $black-900);
+    }
+    .value {
+      @extend .fontMedium;
+      @include font-weight-color($fw-regular, $black-200);
+    }
+  }
+}
+.step2Container {
+  p {
+    margin-bottom: 24px;
+  }
+  .primaryText {
+    @extend .fontLarge;
+    @include font-weight-color($fw-regular, $black-600);
+  }
+  .secondaryText {
+    @extend .fontMedium;
+    @include font-weight-color($fw-regular, $black-600);
+  }
+}
+
+.subText {
+  text-align: center;
+  margin-top: 10px;
+  @extend .fontSmall;
+  @include font-weight-color($fw-regular, $black-700);
+}
+
+.checkboxContainer {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  .labelTitle {
+    margin-left: 10px;
+    font-size: 11px;
+    line-height: 18px;
+    @include font-weight-color($fw-regular, $black-700);
+  }
+}

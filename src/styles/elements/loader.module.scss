@@ -1,0 +1,74 @@
+@import 'styles/base/variables';
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.donut {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  span {
+    font-size: 12px;
+    line-height: 18px;
+    color: #545454;
+    font-weight: $fw-bold;
+  }
+  &Medium {
+    width: 16px;
+    height: 16px;
+  }
+  ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-left-color: $primary;
+    animation: donut-spin 1.4s linear infinite;
+  }
+}
+
+.stateLoaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: 12px;
+  color: $black-900;
+  background-color: #f3f3f3;
+  span {
+    margin-top: 10px;
+  }
+}
+
+.top {
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.opacity30 {
+  background-color: rgba(#f3f3f3, 0.3);
+}
+.opacity60 {
+  background-color: rgba(#f3f3f3, 0.6);
+  color: $black-100;
+}

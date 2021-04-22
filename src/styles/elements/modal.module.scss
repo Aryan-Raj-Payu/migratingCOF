@@ -1,0 +1,72 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+.modalContainer {
+  transition: all 0.2s ease;
+  max-height: 95vh;
+  background-color: $white;
+  margin: 15% auto;
+  padding: 24px 16px;
+  border-radius: 8px;
+  position: relative;
+  overflow-y: auto;
+}
+.modalHeader {
+  display: flex;
+  width: 81%;
+  &Title {
+    @extend .fontXlLarge;
+    @include font-weight-color($fw-medium, $black-100);
+  }
+}
+.modalBody {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &SecondaryText {
+    @extend .fontLarge;
+    @include font-weight-color($fw-regular, $black-600);
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  right: 5px;
+  top: 22px;
+}
+.modalSize {
+  &Small {
+    width: 300px;
+  }
+  &FullPageMobile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media (min-width: 768px) {
+      flex: 0 600px;
+      height: 80%;
+    }
+  }
+}
+.customBodyHeight {
+  max-height: 63vh;
+}

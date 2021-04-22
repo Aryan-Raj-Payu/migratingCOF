@@ -1,0 +1,172 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+.parent{
+  width: 736px;
+  @media (max-width: 770px) {
+    width:unset;
+  }
+}
+.section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 48px;
+  }
+}
+.title {
+  text-align: center;
+  @include font-size-line-weight-color(32px, 40px,900,$black-100);
+  @media (max-width: 770px) {
+    @include font-size-line(20px, 20px);
+  }
+}
+.titleText {
+  text-align: center;
+  @include font-size-line-weight-color(24px, 28px,900,$black-100);
+  @media (max-width: 770px) {
+    @include font-size-line(20px, 20px);
+  }
+}
+.cropContainer{
+width:90%;
+margin:auto;
+margin-top: 32px;;
+}
+.onMobileView {
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    bottom: -41px;
+    background: rgba(0, 0, 0, 1);
+    text-align: center;
+    left: 0;
+    width: 100%;
+    // padding: 5px 0;
+
+   .captureButton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    font-weight: $fw-bold;
+    border-radius: 0px;
+    width: 20%;
+    color:white;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    @include button-size(4px, 13px 20px);
+    @include font-size-line(14px, 20px);
+    // @include button-modifier($primary, $primary-dark);
+    @media (min-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 770px) {
+        width:100%;
+      }
+   }
+   
+}
+  .onDesktopView{
+    display:flex;
+    justify-content: center; 
+        margin-top:24px;
+       .captureButton{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        font-weight: $fw-bold;
+        border-radius: 8px;
+        width: 120px;
+        height:48px;
+        cursor: pointer;    
+        @media (min-width: 768px) {
+          // min-width: 240px;
+          
+        }
+        @media (max-width: 770px) {
+            // width:90%;
+            display: none;
+          }
+       }
+       .captureButton:last-child{
+         margin-left:24px;
+         @include button-modifier($primary, $primary-dark);
+       }
+       .captureButton:first-child{
+        border: 1px solid #EE3362;
+        color:#EE3362;
+        background-color: white;
+       
+      }
+   }
+
+
+.yesButton{
+  display:flex;
+  justify-content: center; 
+      margin-top:24px;
+     .captureButton{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      border: 1px solid transparent;
+      font-weight: $fw-bold;
+      border-radius: 8px;
+      width: 232px;
+      height:48px;
+      cursor: pointer; 
+      @include button-modifier($primary, $primary-dark);   
+      @media (min-width: 768px) {
+        // min-width: 240px;
+        
+      }
+      @media (max-width: 770px) {
+          // width:90%;
+          // display: none;
+        }
+     }
+       }
+.footer {
+  margin-top: auto;
+  .subText {
+    @include font-size-line-weight-color(13px, 16px,$fw-regular,$black-700);
+    @media(max-width:770px) {
+      @include font-size-line(10px, 12px); 
+  }
+}
+}
+.text{
+  @include font-size-line-weight-color(14px, 20px,500,black);
+   }
+.text:first-child{
+  color:black;
+}
+.linktext{
+  text-decoration: none;
+  color:red;
+}
+.reactCrop{
+ width:480px;
+ margin:auto;
+ position:relative;
+  @media(max-width:770px) {
+    @include font-size-line(10px, 12px);
+    width:100%;  
+}
+}
+
+

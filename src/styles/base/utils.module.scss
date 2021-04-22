@@ -1,0 +1,31 @@
+@import 'styles/base/variables';
+.mt10 {
+  margin-top: 10px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.mtAuto {
+  margin-top: auto;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mAuto {
+  margin: auto;
+}
+.mxAuto {
+  margin: 0 auto;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.overflowAuto {
+  overflow: auto;
+}
+
+.fwRegular {
+  font-weight: $fw-regular !important;
+}

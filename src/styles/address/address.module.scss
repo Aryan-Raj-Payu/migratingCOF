@@ -1,0 +1,123 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@mixin addressButton($width, $hieght, $border, $border-radius, $outline, $cursor) {
+  width: $width;
+  height: $hieght;
+  border: $border;
+  border-radius: $border-radius;
+  outline: $outline;
+  cursor: $cursor;
+}
+.parent {
+  width: 736px;
+  @media (max-width: 770px) {
+    width: unset;
+  }
+}
+.section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 48px;
+  }
+}
+.title {
+  @include font-size-line-weight-color(32px, 44px, $fw-strong-bold, $black-100);
+  margin-left: 8px;
+  margin-bottom: 10px;
+  @media (max-width: 770px) {
+    @include font-size-line-weight-color(18px, 24px, $fw-bold, $black-100);
+    margin-bottom: 12px;
+  }
+}
+.subTitle {
+  margin-left: 8px;
+  margin-bottom: 30px;
+  margin-top: -5px;
+  @include font-size-line-weight-color(14px, 20px, $fw-regular, #999999);
+  @media (max-width: 770px) {
+    padding-top: 15px;
+  }
+}
+.addressContainer {
+  @media (max-width: 770px) {
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+  }
+}
+
+.address {
+  display: flex;
+  margin-bottom: 24px;
+  padding-left: 5px;
+  .addressValue {
+    margin-left: 12px;
+    @include font-size-line-weight-color(14px, 20px, $fw-regular, #2e2e2e);
+  }
+}
+.viewButtonContainer {
+  margin-left: 7px;
+  @media (max-width: 770px) {
+    padding-bottom: 15px;
+  }
+  .viewAll {
+    display: inline-block;
+    color: #999999;
+    position: relative;
+    top: -6px;
+  }
+  .viewArrow {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+  @media (max-width: 770px) {
+    text-align: center;
+  }
+}
+.viewButton {
+  @include addressButton(100px, 32px, none, 5px, none, pointer);
+  @include font-weight-color(bold, rgb(126, 117, 117));
+}
+.addAddress {
+  @include addressButton(250px, 35px, none, 5px, none, pointer);
+  .add {
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    left: -2px;
+  }
+  @include font-size-line-weight-color(14px, 20px, 500, #ee3362);
+}
+.addressButtonContainer {
+  margin-top: 15px;
+  margin-left: 8px;
+  .subTitle {
+    margin-bottom: 7px;
+  }
+}
+.footer {
+  margin-top: 20px;
+  border-top: 1px solid #f1f2f3;
+  .subText {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    @include font-size-line-weight-color(13px, 16px, $fw-regular, $black-700);
+    @media (max-width: 770px) {
+      @include font-size-line(11px, 18px);
+    }
+    .error {
+      display: inline-block;
+      position: relative;
+      top: 6px;
+      margin-right: 4px;
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

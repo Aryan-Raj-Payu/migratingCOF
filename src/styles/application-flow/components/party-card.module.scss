@@ -1,0 +1,46 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.partyCard {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+}
+.logo {
+  width: 56px;
+  height: 56px;
+  background-color: $white;
+  border: 1px solid $border-light;
+  border-radius: 50%;
+  padding: 2px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+.title {
+  margin-bottom: 2px;
+  @extend .fontMedium;
+  @include font-weight-color($fw-regular, $black-200);
+  @media (min-width: 768px) {
+    font-size: $font-size-xl;
+  }
+}
+.subTitle {
+  @extend .font2XlLarge;
+  @include font-weight-color($fw-bold, $black-200);
+  @media (min-width: 768px) {
+    font-size: $font-size-5xl;
+  }
+}

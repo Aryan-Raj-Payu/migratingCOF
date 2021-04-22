@@ -1,0 +1,259 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+.section {
+  padding: 16px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 48px 48px 0px 48px;
+  }
+}
+.parent{
+  width: 736px;
+  @media (max-width: 770px) {
+    width:unset;
+  }
+}
+.xmlHeading {
+    margin-left:30px;
+    letter-spacing: normal;
+   @include font-size-line-weight-color(25px,1.43,500,#000000);
+    padding-top: 20px;
+   
+  }
+  .hv-error {
+    text-align: center;
+    color: #ea0020;
+    padding: 15px;
+  }
+  .instructions {
+    margin-top: 40px;
+
+  }
+  .instructions ol {
+    margin: 0;
+    padding: 0;
+    counter-reset:item;
+  }
+  .instructions li {
+    letter-spacing: normal;
+    counter-increment: item;
+    list-style: none inside;
+    margin: 0 auto;
+    text-indent: -30px;
+    padding-left: 30px;
+    counter-increment: item;
+    @include font-size-line-weight-color(18px,1.33,500,#000000);
+  }
+  .instructions li a {
+    color: #ed3561;
+    text-decoration: underline;
+    font-size: 16px;
+  }
+  .instructions li:before {
+    text-align: right;
+    padding-right: 5px;
+    content: counter(item);
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ee3662;
+    box-sizing: border-box;
+    @include font-size-line-weight-color(10.5px,normal,500,white);
+    margin-right: 15px;
+  }
+  
+  .linkWrapper::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 46px;
+    background-color: lightgray;
+    left: 6px;
+    top: 25px;
+  }
+  
+  .linkWrapper:last-child::after {
+    width: 0;
+  }
+  
+  .fileInputWrapper {
+    margin-top:70px;
+    max-width: 560px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+   
+  
+  }
+  
+  .fileBlock {
+    width: 100%;
+    max-width: 320px; 
+  }
+  
+  .uploadLabel {
+    @include font-size-line-weight-color(14px,1.71,500,#6c6b76);
+  }
+  
+  .fileInputContainer {
+    height: 43px;
+    border-radius: 8px;
+    border: solid 2px #cecece;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+  }
+  
+  .uploadBtn {
+    letter-spacing: 1.25px;
+    @include font-size-line-weight-color(14px,1.43,600,#ed3561);
+  }
+  
+  .shareCodeInput {
+    width: 120px;
+    height: 41px;
+    border-radius: 8px;
+    border: solid 2px #cecece;
+    outline: none;
+    @include font-size-line(18px,normal);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .shareCodeContainer{
+    max-width: 350px;
+  }
+  
+  .educationHeading {
+    letter-spacing: normal;
+    text-align: center;
+    max-width: 604px;
+    margin: 0 auto;
+    @include font-size-line-weight-color(28px,1.43,500,#000000);
+  }
+  
+  .InstructionsLink {
+    padding-left: 30px;
+    cursor: pointer;
+    padding-top: 5px;
+    letter-spacing: 1.25px;
+    @include font-size-line-weight-color(14px,normal,600,#ed3561);
+  }
+  
+  .educationButton {
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .errorContainer{
+    position: absolute;
+    display: block;
+    margin-top: 6px;
+  }
+  .errorMsg{
+    @include font-size-line-weight-color(12px,1.17,500,#d7002c);
+    padding-left: 4px;
+  }
+  
+  .shareCodeMsg{
+    text-align: center;
+    margin-top: 24px;
+    letter-spacing: 0.11px;
+    @include font-size-line-weight-color(16px,1.38,400,black);
+  }
+  .nextButtonWrapper {
+    text-align: center;
+    margin: 30px;
+  }
+  
+  .text {
+    padding-bottom: 20px;
+    color: #a0a0a0;
+  }
+  
+  .btnSubmit:disabled {
+    background-color: #e0e0e0;
+    color: #8b8b8b;
+  }
+  .linkWrapper {
+    max-width: 575px;
+    margin: 0 auto;
+    height: 70px;
+    position: relative;
+  }
+  @media screen and (max-width:767px) {
+    .xmlHeading, .educationHeading {
+      font-size: 20.2px;
+      margin-left:5px;
+    }
+  
+    .linkWrapper {
+      height: 90px;
+      line-height: 1.33;
+    }
+  
+    .linkWrapper::after {
+      height: 69px;
+    }
+  
+    .shareCodeInput {
+      max-width: 315px;
+    }
+    .shareCodeContainer{
+      margin-top: 40px;
+      width: 100%;
+      margin-left: 3px;
+    }
+  
+    .fileName{
+      width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .fileInputContainer, .shareCodeInput {
+      height: 36px;
+    }
+  
+    .fileInputWrapper {
+      margin-top: 25px;
+      justify-content: center;
+    }
+  }
+
+  .btn{
+    letter-spacing: 0.5px;
+    text-align: center;
+    min-width: 180px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ed3561;
+    text-transform: uppercase;
+    user-select: none;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    @include font-size-line-weight-color(14px,normal,500,#fff);
+  }
+  .educationImg{
+    display:flex;
+    justify-content: center;
+     margin-top: 60px;
+     img{
+     width: 100%;
+     max-width:601px;
+     max-height: 674px;
+     }
+  }
+  .btnContainer{
+   text-align: center;
+   margin-top: 70px;
+  }
+  

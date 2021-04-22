@@ -1,0 +1,35 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.headerbar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background-color: $bg-header;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  z-index: 100;
+  @media (min-width: 768px) {
+    padding: 0 18%;
+  }
+  .title {
+    margin-left: 10px;
+    @extend .fontLarge;
+    @include font-weight-color($fw-medium, $black-200);
+    @media (min-width: 768px) {
+      font-size: $font-size-3xl;
+    }
+  }
+  .logo {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 3px;
+      @extend .fontSmall;
+      @include font-weight-color($fw-regular, $light-grey);
+      text-transform: capitalize;
+    }
+  }
+}

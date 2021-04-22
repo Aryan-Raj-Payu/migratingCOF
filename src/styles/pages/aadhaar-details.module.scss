@@ -1,0 +1,12 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.title {
+  @extend .font2XlLarge;
+  @include font-weight-color($fw-bold, $black-100);
+}
+.subTitle {
+  @extend .fontMedium;
+  @include font-weight-color($fw-regular, $black-700);
+}

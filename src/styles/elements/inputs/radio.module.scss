@@ -1,0 +1,65 @@
+@import 'styles/base/variables';
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  background-color: $white;
+  border: 1px solid #c7c6cc;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a primary border color */
+.container:hover input ~ .checkmark {
+  border: 1px solid $primary;
+}
+
+/* When the radio button is checked, add a primary background */
+.container input:checked ~ .checkmark {
+  border: 1px solid $primary;
+  background-color: $white;
+
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $primary;
+ 
+}

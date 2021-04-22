@@ -1,0 +1,48 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  @media (min-width: 768px) {
+    width: 544px;
+  }
+}
+.titleContainer {
+  display: flex;
+  align-items: center;
+  .title {
+    margin-left: 10px;
+    @extend .fontLarge;
+    @include font-weight-color($fw-regular, $black-600);
+  }
+  .changeEmiAction {
+    margin-left: auto;
+  }
+}
+
+.planDetailsContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  .planInfo {
+    @extend .font2XlLarge;
+    @include font-weight-color($fw-bold, $black-200);
+  }
+  .rateInfo {
+    margin-left: auto;
+    @extend .fontMedium;
+    @include font-weight-color($fw-bold, $black-900);
+  }
+  .noEmi {
+    margin-left: auto;
+    text-transform: uppercase;
+    @extend .fontSmall;
+    @include font-weight-color($fw-medium, $success);
+  }
+}
+.repaymentAction {
+  text-decoration: underline;
+}

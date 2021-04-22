@@ -1,0 +1,100 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@mixin textMixin($margin-top, $margin-bottom, $margin-left) {
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+}
+.title {
+  @include font-size-line-weight-color(32px, 44px, 900, $black-100);
+  @media (max-width: 770px) {
+    @include font-size-line-weight-color(18px, 24px, bold, #2e2e2e);
+  }
+}
+.subTitle {
+  @include font-size-line-weight-color(14px, 20px, $fw-regular, $black-500);
+}
+.parent {
+  width: 736px;
+  @media (max-width: 770px) {
+    width: unset;
+  }
+}
+ 
+.addressContainer {
+  .text {
+    @include textMixin(5px, 5px, 20px);
+    @include font-size-line-weight-color(12px, 18px, 500, #999999);
+  }
+  .subText {
+    @include textMixin(5px, 5px, 20px);
+    @include font-size-line-weight-color(13px, 16px, $fw-regular, $black-700);
+  }
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding-left: 5px;
+  padding-top: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.currentAddress {
+  margin-left: 0px;
+  margin-bottom: 20px;
+
+  .subText {
+    display: flex;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    @include font-size-line-weight-color(12px, 18px, $fw-regular, #666666);
+    .iconAddress {
+      margin-top: 6px;
+      margin-left: 5px;
+    }
+  }
+}
+.section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 48px;
+  }
+}
+.addressProof {
+  display: flex;
+  margin-bottom: 20px;
+  .option {
+    margin-left: 15px;
+    .visible {
+      display: none;
+      margin-left: 15px;
+      ol {
+        list-style-type: inherit;
+        li {
+          @include font-size-line-weight-color(12px, 18px, normal, #999999);
+        }
+      }
+    }
+    .recommended {
+      margin-left: 10px;
+      top: -3px;
+      @include font-size-line-weight-color(10px, 16px, $fw-regular, #128865);
+      background: #d8ffee;
+      border-radius: 8px;
+      padding: 3px 10px 3px 10px;
+      position: relative;
+      display: inline-block;
+      border-radius: 40px;
+    }
+  }
+}
+.footer {
+  border-top: 1px solid #f1f2f3;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 770px) {
+    border-top: unset;
+    justify-content: center;
+  }
+}

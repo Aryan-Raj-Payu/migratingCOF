@@ -1,0 +1,31 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.title {
+  @extend .font2XlLarge;
+  @include font-weight-color($fw-bold, $black-100);
+  @media (min-width: 768px) {
+    max-width: 290px;
+    font-size: $font-size-5xl;
+    margin-bottom: 8px;
+  }
+}
+.subTitle {
+  @extend .fontLarge;
+  @include font-weight-color($fw-regular, $black-500);
+}
+
+.footer {
+  margin-top: auto;
+  .subText {
+    text-align: center;
+    margin-top: 10px;
+    @extend .fontSmall;
+    @include font-weight-color($fw-regular, $black-700);
+    @media (min-width: 768px) {
+      font-size: $font-size-md;
+    }
+  }
+}
+

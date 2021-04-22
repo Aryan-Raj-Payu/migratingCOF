@@ -1,0 +1,18 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.inputContainer {
+  margin-top: 30px;
+  .aadhaarInput {
+    border: none;
+    border-bottom: 1px solid $otp-input-border !important;
+    width: 81px;
+    height: 40px;
+    text-align: center;
+    letter-spacing: 8px;
+    margin-right: 20px;
+    @extend .font3XlLarge;
+    @include font-weight-color($fw-medium, $black-200);
+  }
+}

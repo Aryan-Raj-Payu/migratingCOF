@@ -1,0 +1,32 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.startKycCard {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}
+.stepContainer {
+  display: flex;
+  align-items: center;
+}
+.overlineTitle {
+  @extend .fontLarge;
+  @include font-weight-color($fw-regular, $black-600);
+}
+.title {
+  margin-top: 16px;
+  @extend .font2XlLarge;
+  @include font-weight-color($fw-bold, $black-200);
+}
+.checkboxContainer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  .labelTitle {
+    margin-left: 10px;
+    @extend .fontMedium;
+    @include font-weight-color($fw-regular, $black-700);
+  }
+}

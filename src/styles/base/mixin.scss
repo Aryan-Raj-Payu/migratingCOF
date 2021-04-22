@@ -1,0 +1,51 @@
+// Button modifier
+@mixin button-modifier($default-color, $active-color) {
+  color: $white;
+  background-color: $default-color;
+  border-color: $default-color;
+  &:hover {
+    color: $white;
+    background-color: $active-color;
+    border-color: $active-color;
+  }
+}
+
+@mixin button-size($border-radius, $padding) {
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+@mixin status-modifier($bg-color, $color) {
+  color: $color !important;
+  background-color: rgba($bg-color, 0.2);
+  border-color: $color;
+}
+
+@mixin text-ellipsis($max-width) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 5px;
+  max-width: $max-width;
+}
+
+@mixin font-size-line($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-weight-color($font-weight, $color) {
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin font-size-line-weight-color($font-size, $line-height,$font-weight, $color){
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}

@@ -1,0 +1,50 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.title {
+  @extend .fontLarge;
+  @include font-weight-color($fw-regular, $black-600);
+}
+.emiContainer {
+  @media (min-width: 768px) {
+    width: 544px;
+  }
+  .active {
+    .amount,
+    .rate,
+    .noEmi {
+      font-weight: $fw-bold;
+    }
+  }
+  .emiInput {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .amount {
+    margin-left: 20px;
+    @extend .fontXlLarge;
+    @include font-weight-color($fw-regular, $black-200);
+    @media (min-width: 768px) {
+      font-size: $font-size-3xl;
+    }
+  }
+  .rate {
+    margin-left: auto;
+    @extend .fontMedium;
+    @include font-weight-color($fw-regular, $black-900);
+  }
+  .noEmi {
+    margin-left: auto;
+    text-transform: uppercase;
+    @extend .fontSmall;
+    @include font-weight-color($fw-medium, $success);
+  }
+  .divider {
+    background-color: $divider;
+    opacity: 0.2;
+    height: 1px;
+    width: 100%;
+  }
+}

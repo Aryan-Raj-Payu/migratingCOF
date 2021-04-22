@@ -1,0 +1,87 @@
+@import 'styles/base/variables';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $bg-body;
+  color: $black-100;
+
+  .headerbar {
+    display: flex;
+    flex: 0 0 54px;
+    @media (min-width: 768px) {
+      flex: 0 0 72px;
+    }
+  }
+
+  .cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: $white;
+    @media (min-width: 768px) {
+      min-width: 352px;
+      max-width: 736px;
+      margin: 54px auto;
+      flex: none;
+      box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 16px;
+    }
+  }
+
+  .customCardContainer {
+    margin: auto;
+    box-shadow: none;
+    background-color: inherit;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    overflow-y: auto;
+  }
+
+  .fixedfooterContainer {
+    margin-top: auto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.04);
+    background-color: $white;
+    padding: 16px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+      margin: auto;
+      max-width: 736px;
+      bottom: 54px;
+      border-radius: 0 0 16px 16px;
+    }
+  }
+
+  .section {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      padding: 32px;
+    }
+  }
+
+  .flexScrollContainer {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+  }
+
+  .sectionDivider {
+    background: $section-divder;
+    border-radius: 12px;
+    height: 4px;
+    width: 100%;
+  }
+}

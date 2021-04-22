@@ -1,0 +1,38 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  @media (min-width: 768px) {
+    width: 544px;
+  }
+}
+.title {
+  @extend .font5XlLarge;
+  @include font-weight-color($fw-bold, $black-200);
+}
+.subtitle {
+  @extend .fontLarge;
+  @include font-weight-color($fw-regular, $black-500);
+}
+
+.btnPosition {
+  margin-top: auto;
+  @media (min-width: 768px) {
+    margin-top: 32px;
+    button {
+      margin: auto;
+    }
+  }
+}
+
+.image {
+  margin-top: 20px;
+  width: 100%;
+  @media (min-width: 768px) {
+    height: 186px;
+  }
+}

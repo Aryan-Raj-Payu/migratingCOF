@@ -1,0 +1,35 @@
+.container {
+  width: 280px;
+}
+.camera {
+  display: flex;
+  border-bottom: 1px solid #f1f2f3;
+  padding: 15px;
+  cursor: pointer;
+  .iconCamera {
+    width: 10%;
+  }
+  .iconArrow {
+    margin-left: 40%;
+  }
+  .text {
+    width: 40%;
+    margin-left: 12px;
+  }
+}
+.gallery {
+  display: flex;
+  padding: 15px;
+  cursor: pointer;
+
+  .iconGallery {
+    width: 10%;
+  }
+  .galleryArrow {
+    margin-left: 20%;
+  }
+  .galleryText {
+    width: 60%;
+    padding-left: 12px;
+  }
+}

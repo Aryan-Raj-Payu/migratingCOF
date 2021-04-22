@@ -1,0 +1,111 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.title {
+  @extend .font2XlLarge;
+  @include font-weight-color($fw-medium, $black-200);
+  text-align: center;
+  @media (min-width: 768px) {
+    font-size: $font-size-5xl;
+    font-weight: $fw-bold;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  @media (min-width: 768px) {
+    margin: auto;
+    max-height: 600px;
+  }
+}
+
+.logo {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    margin-right: 10px;
+    @extend .fontMedium;
+    @include font-weight-color($fw-regular, $black-900);
+    text-transform: capitalize;
+    @media (min-width: 768px) {
+      font-size: $font-size-xl;
+    }
+  }
+}
+
+.loaderContainer {
+  margin: 0 auto 60px auto;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    border: solid #ee3362;
+    width: 30px;
+    height: 30px;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(-45deg);
+  }
+
+  .arrowSliding {
+    position: absolute;
+    animation: slide 4s linear infinite;
+  }
+
+  .delay1 {
+    animation-delay: 1s;
+  }
+  .delay2 {
+    animation-delay: 2s;
+  }
+  .delay3 {
+    animation-delay: 3s;
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+.secure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 18px;
+  background: #f3fffb;
+  border: 1px solid #e8f9f3;
+  box-sizing: border-box;
+  border-radius: 24px;
+  @media (min-width: 768px) {
+    padding: 10px 32px;
+  }
+  .text {
+    margin-left: 8px;
+    @extend .fontMedium;
+    @include font-weight-color($fw-regular, #6d8880);
+    text-transform: capitalize;
+    @media (min-width: 768px) {
+      font-size: $font-size-xl;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.footer {
+  margin: auto 8px 8px 8px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  z-index: 1001;
+  @media(min-width: 768px){
+    width: 544px;
+    margin: 200px 0 0 0;
+  }
+  .title {
+    @extend .font5XlLarge;
+    @include font-weight-color($fw-bold, $black-200);
+  }
+  .subTitle {
+    @extend .fontLarge;
+    @include font-weight-color($fw-regular, $black-500);
+  }
+  .btnPosition {
+    display: flex;
+    align-items: center;
+    margin: 24px auto;
+    @media(min-width: 768px){
+      margin-top: 45px;
+    }
+  }
+}

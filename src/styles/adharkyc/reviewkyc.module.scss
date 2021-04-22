@@ -1,0 +1,158 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.section {
+  padding: 16px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 48px 48px 0px 48px;
+  }
+}
+.title{
+  margin-bottom:5px;
+  @include font-size-line-weight-color(32px, 44px,900,#2E2E2E);
+  @media (max-width:770px) {
+    font-size: 25px;
+  }
+  }
+.kycDetailsContainer {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  margin-top: 15px;
+  border:1px solid #F1F2F3;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    .photoContainer{
+      display: flex;
+      .photo{
+      width: 60px;
+      height: 60px;
+      border: 0.5px solid #D9D9D9;
+      border-radius: 4px;
+      }
+      .name{
+        @include font-size-line-weight-color(18px, 24px,normal,#2E2E2E);
+        margin-left: 16px;
+        margin-top: 6px;
+      }
+      .adharNo{
+        @include font-size-line-weight-color(12px, 18px,normal,#999999);
+        margin-top:4px;
+      }  
+    }
+    .toogleButton{
+      margin-top: 15px;
+       cursor: pointer
+    }
+  }
+  .details{
+    margin:20px;
+    .heading{
+      @include font-size-line-weight-color(11px, 16px,normal,#999999);
+    }
+    .value{
+      @include font-size-line-weight-color(12px, 18px,500,#2E2E2E);
+      display: flex;
+      align-items: center;
+      margin-top:2px;
+
+    }
+    .dob{
+      display: flex;
+      width:50%;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      margin-top:20px;
+    }
+  }
+}
+
+.text{
+  @include font-size-line-weight-color(15px, 18px,500,#616161); 
+}
+.address{
+  @include font-size-line-weight-color(13px, 18px,500,#2E2E2E); 
+  margin: 10px 0px;
+}
+.checkBox{
+  display: flex;
+  margin:20px 0px;
+}
+.currentAddress{
+    @extend .text;
+      @include font-size-line-weight-color(14px, 18px,500,#666666); 
+      margin-left: 10px;
+      margin-top:2px;
+}
+.currentText{
+  @extend .text;
+  @include font-size-line(14px,18px);
+  text-decoration-line: underline;
+}
+.comunication{
+  @include font-size-line(10px,16px);
+  @include font-weight-color(normal,#999999);
+  margin-top:24px; 
+}
+.bottomView{
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 0px 48px 48px 48px;
+  }
+.checkContainer{
+  display: flex;
+  margin-bottom:16px;
+  .checkText{
+   margin-left: 10px;
+   @extend .text;
+   @include font-size-line-weight-color(12px, 16px,normal,#666666);
+  }
+}
+.checkContainer:first-child{
+  margin-top: 24px;
+}
+
+.checkContainer:nth-child(4){
+  margin-bottom: 24px;
+}
+.conditionContainer{
+  display: flex;
+  margin-bottom:24px;
+.termsCondition{
+  margin-left: 15px;
+  @include font-size-line-weight-color(10px, 16px,500,#666666); 
+}
+}
+@media (max-width:770px) {
+  background-color:#f3f3f3;
+  background: #F5F6F7;
+  margin-top:24px;
+}
+}
+.footer {
+  margin-top: auto;
+  .subText {
+    text-align: center;
+    margin-top: 10px;
+    @extend .fontSmall;
+    @include font-weight-color($fw-regular, $black-700);
+  }
+}
+.parent{
+  width: 736px;
+  @media (max-width: 770px) {
+    width:unset;
+  }
+}
+.value{
+  @include font-size-line-weight-color(12px, 18px,500,#2E2E2E); 
+  display: flex;
+  align-items: center;
+  margin-top:2px;
+}

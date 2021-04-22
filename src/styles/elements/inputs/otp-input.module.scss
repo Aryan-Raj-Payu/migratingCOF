@@ -1,0 +1,31 @@
+@import 'styles/base/variables';
+@import 'styles/base/mixin';
+@import 'styles/base/title.module.scss';
+
+.otpContainer {
+  margin-top: 20px;
+  .otpInput {
+    background: $white;
+    border: 1px solid $otp-input-border;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    @extend .font2XlLarge;
+    @include font-weight-color($fw-regular, $black-600);
+  }
+}
+
+.resendOtpContainer {
+  margin-top: 30px;
+  .timerLoader {
+    display: flex;
+    align-items: center;
+    .text {
+      margin-left: 10px;
+      @extend .fontMedium;
+      @include font-weight-color($fw-regular, $black-500);
+    }
+  }
+}

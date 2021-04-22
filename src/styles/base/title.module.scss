@@ -1,0 +1,42 @@
+@import 'styles/base/mixin';
+
+// Mobile devices
+$font-size-sm: 10px;
+$font-size-md: 12px;
+$font-size-lg: 14px;
+$font-size-xl: 16px;
+$font-size-2xl: 18px;
+$font-size-3xl: 20px;
+$font-size-4xl: 22px;
+$font-size-5xl: 24px;
+$font-size-6xl: 26px;
+$font-size-7xl: 28px;
+$font-size-8xl: 30px;
+$font-size-9xl: 32px;
+
+// Desktop devices
+
+.fontSmall {
+  @include font-size-line($font-size-sm, 16px);
+}
+.fontMedium {
+  @include font-size-line($font-size-md, 22px);
+}
+.fontLarge {
+  @include font-size-line($font-size-lg, 20px);
+}
+.fontXlLarge {
+  @include font-size-line($font-size-xl, 24px);
+}
+.font2XlLarge {
+  @include font-size-line($font-size-2xl, 28px);
+}
+.font3XlLarge {
+  @include font-size-line($font-size-3xl, 28px);
+}
+.font4XlLarge {
+  @include font-size-line($font-size-4xl, 30px);
+}
+.font5XlLarge {
+  @include font-size-line($font-size-5xl, 32px);
+}
